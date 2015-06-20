@@ -7,8 +7,12 @@
     display: none;
   }
   
+  a{
+    text-decoration: none;
+  }
+  
   a:hover + .wod{
-    display: block ;
+    display: block;
 }
 
 .project{
