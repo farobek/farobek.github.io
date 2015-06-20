@@ -5,6 +5,8 @@
   }
   div{
     display: none;
+    font-family: 'Roboto';
+    color: white;
   }
   
   a{
