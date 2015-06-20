@@ -7,7 +7,7 @@
     display: none;
   }
   
-  div:hover + .wod{
+  a:hover + .wod{
     display: block ;
 }
 
