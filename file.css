@@ -3,11 +3,11 @@
     color: grey;
     text-align: center;
   }
-  a{
+  div{
     display: none;
   }
   
-  a:hover + .wod{
+  div:hover + .wod{
     display: block ;
 }
 
