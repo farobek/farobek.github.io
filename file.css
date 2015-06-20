@@ -18,6 +18,7 @@
 .project{
   text-align: left;
   background: green;
-  colour: white;
+  color: white;
+  padding: 50px;
   
 }
