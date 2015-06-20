@@ -15,12 +15,12 @@
     text-decoration: none;
   }
   
-  span:hover{
+  a:hover{
     background: blue;
   }
   
-  span:hover + .description{
-    display: inline;
+  a:hover + .description{
+    display: block;
 }
 
 .project{
