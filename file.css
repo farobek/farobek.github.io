@@ -3,6 +3,9 @@
     color: grey;
     text-align: center;
   }
+  a{
+    display: none;
+  }
   
   a:hover + .wod{
     display: block ;
