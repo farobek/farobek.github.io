@@ -16,6 +16,8 @@
 }
 
 .project{
+  font-family: 'Roboto';
+  font-size: 30px;
   text-align: left;
   background: green;
   color: white;
