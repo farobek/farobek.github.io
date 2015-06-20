@@ -7,7 +7,7 @@
     display: none;
     font-family: 'Roboto';
     padding-top: 40px;
-    color: white;
+    color: black;
   }
   
   a{
@@ -18,9 +18,8 @@
     background: blue;
   }
   
-  a:hover + .description{
-    display: block;
-    color: black;
+  span:hover + .description{
+    display: inline;
 }
 
 .project{
