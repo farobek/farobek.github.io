@@ -16,7 +16,8 @@
 }
 
 .project{
-  height: 600px;
-  width: 800px;
+  text-align: left;
+  background: green;
+  colour: white;
   
 }
