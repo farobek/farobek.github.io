@@ -1,12 +1,12 @@
 <!doctype html>
-<html ng-app="Ironthrone">
+<html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.js'></script>
-<script type='text/javascript' src="file.js"></script>
+    <script type='text/javascript' src="file.js"></script>
 </head>
 <body>
-<div ng-controller="seeid">
+<div ng-app="Ironthrone"> ng-controller="seeid">
     <button class="button2" ng-click="tab=1">About</button>
     <span class="credit">Made with <span style="color:red">♥</span> by <a href="http://farobek.github.io/">Jakub Farobek</a></span>
     <div style="background-color: #08298A; border: 2px solid #08298A; border-radius: 10px" ng-show="tab==1"><p>{{gamedescription}}</p>
