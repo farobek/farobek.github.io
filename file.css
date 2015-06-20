@@ -20,7 +20,7 @@
   }
   
   a:hover + .description{
-    display: inline;
+    display: block;
 }
 
 .project{
