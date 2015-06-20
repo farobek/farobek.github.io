@@ -9,6 +9,8 @@
     padding-top: 30px;
     color: white;
     background: blue;
+    border: 5px;
+    border-radius: 5px;
   }
   
   a{
