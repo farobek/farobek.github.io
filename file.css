@@ -1,4 +1,4 @@
-  h6,h4,h2,h1,p{
+  h6,h4,h2,h1,p, title{
     font-family: 'Roboto';
     color: grey;
     text-align: center;
@@ -6,7 +6,7 @@
   .description{
     display: none;
     font-family: 'Roboto';
-    padding-top: 30px;
+    padding: 10px;
     color: white;
     background: blue;
     border: 5px;
