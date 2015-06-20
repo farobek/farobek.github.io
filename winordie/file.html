@@ -1,0 +1,38 @@
+<body>
+<div ng-app="Ironthrone" ng-controller="seeid">
+
+    <button class="button2" ng-click="tab=1">About</button>
+    <span class="credit">Made with <span style="color:red">♥</span> by <a href="http://farobek.github.io/">Jakub Farobek</a></span>
+    <div style="background-color: #08298A; border: 2px solid #08298A; border-radius: 10px" ng-show="tab==1"><p>{{gamedescription}}</p>
+    <button class="button2" ng-click="tab=2">Hide the text</button>
+    </div>
+    
+    <hr></hr>
+<h2>A Game of Thrones</h2>
+    <p>Your score: <b>{{yourscore}}</b> - Your enemies' score: <b>{{enemyscore}}</b></p>
+    <span ng-repeat="item in list">
+    <button class="button" ng-show="play" ng-click="checkhouse(item.house, item.url)">{{item.label}}</button>
+    </span>
+    
+    
+ <p>You sided with: {{yourchoice}}</p>
+<p>Your enemies sided with: {{pcchoice}}</p>
+    <img src="{{yourpic}}" height="100" width="200"></img><span style="padding-left: 20px;padding-right: 20px">VS</span><img src="{{pcpic}}" height="100" width="200"></img>
+        <hr></hr>
+<p> Outcome: {{result1}}</p>
+<p> <i> {{result2}}</i></p>
+    <img ng-src="{{outcomepic}}" height="200" width="200"></img>
+    <p>{{result4}}</p>
+    <button ng-show="revenge" class="button" ng-click="reset()">Make justice </button>
+        <button ng-show="betrayal" class="button" ng-click="reset()">Become the Protector of the Realm</button>
+
+<p style="font-size:40px">{{result3}}</p>
+ <img src="http://fc07.deviantart.net/fs71/f/2012/248/a/a/sign_iron_throne_by_bolsonister-d5dq4gz.png" />
+        
+</div>
+    <iframe id="player" type="text/html" width="0" height="0"
+    src="https://www.youtube.com/embed/kvpd2w8cSVc?autoplay=1&loop=1&playlist=kvpd2w8cSVc"
+  frameborder="0">
+</iframe>
+
+</body>
