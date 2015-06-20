@@ -1,3 +1,10 @@
-a:hover + .wod{
+  h6,h4,h2,h1,body{
+    font-family: 'Roboto';
+    color: grey;
+    text-align: center;
+  }
+  
+  a:hover + .wod{
     display: block ;
 }
+
