@@ -16,8 +16,7 @@
   }
   
   span:hover{
-    background: black;
-    text: "Asa"
+    background: blue;
   }
   
   a:hover + .description{
