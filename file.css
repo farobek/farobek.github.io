@@ -19,6 +19,8 @@
   text-align: left;
   background: green;
   color: white;
-  padding: 150px;
+  padding: 30px;
+  border: 25px;
+  border-radius: 25px; 
   
 }
