@@ -8,15 +8,13 @@
     font-family: 'Roboto';
     padding-top: 40px;
     color: black;
+    background: blue;
   }
   
   a{
     text-decoration: none;
   }
   
-  span:hover{
-    background: blue;
-  }
   
   .project:hover .description{
     display: inline;
