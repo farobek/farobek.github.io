@@ -7,7 +7,6 @@
     display: none;
     font-family: 'Roboto';
     padding-top: 40px;
-    background: black;
     color: white;
   }
   
@@ -21,6 +20,7 @@
   
   a:hover + .description{
     display: block;
+    color: black;
 }
 
 .project{
