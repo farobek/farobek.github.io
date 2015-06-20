@@ -6,7 +6,7 @@
   div{
     display: none;
     font-family: 'Roboto';
-    color: white;
+    padding-top: 10px;
   }
   
   a{
