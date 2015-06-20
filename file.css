@@ -16,7 +16,7 @@
   }
   
   a:hover + .wod{
-    display: block;
+    display: inline;
 }
 
 .project{
