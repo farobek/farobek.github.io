@@ -19,7 +19,7 @@
     background: blue;
   }
   
-  a:hover + .description{
+  span:hover + .description{
     display: inline;
 }
 
