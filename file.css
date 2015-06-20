@@ -1,4 +1,4 @@
-  h6,h4,h2,h1{
+  h6,h4,h2,h1,p{
     font-family: 'Roboto';
     color: grey;
     text-align: center;
@@ -19,6 +19,6 @@
   text-align: left;
   background: green;
   color: white;
-  padding: 50px;
+  padding: 150px;
   
 }
