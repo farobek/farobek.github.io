@@ -15,7 +15,7 @@
     text-decoration: none;
   }
   
-  a:hover{
+  span:hover{
     background: blue;
   }
   
