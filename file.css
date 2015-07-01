@@ -17,6 +17,10 @@
     text-decoration: none;
   }
   
+  a:hover{
+    color: #DC143C;
+  }
+  
   
   .project:hover .description{
     display: inline;
