@@ -3,7 +3,7 @@
     color: grey;
     text-align: center;
   }
-  .description{
+  #description1{
     display: none;
     font-family: 'Roboto';
     padding: 10px;
@@ -22,7 +22,7 @@
   }
   
   
-  .project:hover .description{
+  #project1:hover #description1{
     display: inline;
 }
 
