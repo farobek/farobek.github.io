@@ -13,6 +13,16 @@
     border-radius: 5px;
   }
   
+  #description2{
+    display: none;
+    font-family: 'Roboto';
+    padding: 10px;
+    color: white;
+    background: blue;
+    border: 5px;
+    border-radius: 5px;
+  }
+  
   a{
     text-decoration: none;
   }
@@ -23,6 +33,10 @@
   
   
   #project1:hover #description1{
+    display: inline;
+}
+
+#project2:hover #description2{
     display: inline;
 }
 
