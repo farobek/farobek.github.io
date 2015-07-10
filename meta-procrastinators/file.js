@@ -1,3 +1,5 @@
+//contains all the JS code
+
 var app = angular.module("MetProc", []);
 
 app.service("datastore", function(){
