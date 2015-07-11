@@ -1,10 +1,10 @@
-#titles{
+#titles, head{
     background:#99E699;
     color: lightBlue;
 }
 
 
-body {
+head,body {
     background:#99E699;
 }
 
