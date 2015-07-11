@@ -44,11 +44,9 @@ h1, h2{
     text-align: center;
 }
 h1{
-    font-weight: bold;
-    text-shadow: -1px -1px 1px #fff, 1px 1px 1px ;
-    opacity: 0.2;
-    color: #99E699;
-    font: 80px 'Museo700';
+    text-shadow: 0px 1px 1px #4d4d4d;
+	color: #222;
+	font: 80px 'LeagueGothicRegular';
 }
 
 #tasks{
