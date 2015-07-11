@@ -45,9 +45,8 @@ h1, h2{
 }
 h1{
     font-weight: bold;
-    font-size: 80px;
-    text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
-    opacity: 0.5;
+    text-shadow: -1px -1px 1px #fff, 1px 1px 1px ;
+    opacity: 0.2;
     color: #99E699;
     font: 80px 'Museo700';
 }
