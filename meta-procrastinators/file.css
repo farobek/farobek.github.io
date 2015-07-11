@@ -2,17 +2,19 @@
     background:#99E699;
 }
 
-a,p{
+span{
   font-size: 15px;
   color: white;
 }
 
 a{
   text-decoration:none;
+  font-size: 15px;
 }
 
 a:hover{
  color: black;
+ text-decoration:none;
 }
 	
 
