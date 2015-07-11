@@ -1,5 +1,3 @@
-//contains all the JS code
-
 var app = angular.module("MetProc", []);
 
 app.service("datastore", function(){
@@ -7,7 +5,7 @@ app.service("datastore", function(){
     var itemtok = ["password"];
     var tok = ["'password'"]; 
     
-    var tasklist = [{nature: "stannis",description: "I am one task", position: 0, type: "list", token: tok[0]}, {nature: "stannis", description: "You are another task", position: 1, type: "list", token: tok[0]}];
+    var tasklist = [{nature: "stannis",description: "I am one task", position: 0, type: "lists", token: tok[0]}, {nature: "stannis", description: "You are another task", position: 1, type: "lists", token: tok[0]}];
     var tasknumber = [0];
     var deldataset = []; //stores the the uuids and the types to use them when deleting the outdated list in the cloud
 
@@ -162,25 +160,41 @@ app.controller("eCRUD", function($scope, datastore){
     $scope.tok = datastore.getToken();
     var tok = $scope.tok;
     $scope.lista = datastore.seeAll();
-    $scope.result = "Send your data";
+    $scope.result = "Initial state";
     
     //Data Pushing - first deletion step and then data pushing
     $scope.pushit = function(){
         
         ///deleting outdated list on the cloud before pushing new list
+        tok = datastore.getItemToken();
         var deldata = datastore.getStrip();
-        var querystring = "token=" + tok; 
-        var options = {endpoint: "lists", method: "DELETE" ,qs:{ql: querystring}} //using a string variable frees me from hardcoding data into the query
-
-        client.request(options, function(error,result){
-            
-            if(error){
-                 $scope.result = "Error while deleted the outdated list!";
-            }else{
-                $scope.result = "Success while deleting outdated list!";
-            }
+        var query = String.fromCharCode(39); //single quote
+        query = query + tok + query; //wraps token in single quotes
+        query = "token=" + query;
+        $scope.result = query;
+   
+        //query example => "token='king'";
         
-        });
+        
+        
+        /////////////
+        var options = {
+	endpoint:"lists",
+	method:"DELETE",
+	qs:{ql:query}
+};
+
+        
+client.request(options, function(error, list){
+        if(error) {
+            $scope.result = "Error while deleting the list!";
+        } else {
+       $scope.result = "The list was deleted successfully.";
+        }
+    });         
+        
+        
+        ///////////////
         
         
  /// Pushing the data - First we prepare the data and then we send it
@@ -203,8 +217,10 @@ app.controller("eCRUD", function($scope, datastore){
         }
     }); 
    }
+        
     
     };
+    
     
     //Loading the data
     //I use the token to identify all the tasks related to the same session
@@ -254,11 +270,12 @@ app.controller("eCRUD", function($scope, datastore){
     //get uuids and types - to later destroy the data on the cloud
     var tohold = result.entities.concat();   //cloning the array rather than using a reference to it
     rawdata = null;
-    datastore.strip();
+    datastore.strip(tohold);
     var allistitems = datastore.seeAll();
-    $scope.result = allistitems; 
+    //$scope.result = datastore.getStrip(); 
     }
     });
 
    };
+   
 });
