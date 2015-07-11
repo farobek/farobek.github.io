@@ -9,7 +9,8 @@ h1{
     font-size: 60px;
 }
 
-body,head{
+body {
+    color:#99E699;
     background:#99E699;
 }
 
