@@ -49,6 +49,7 @@ h1{
     text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
     opacity: 0.5;
     color: #99E699;
+    font: 80px 'Museo700';
 }
 
 #tasks{
@@ -58,7 +59,6 @@ h1{
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 17px;
-    font: 80px 'Museo700';
 }
 
 #signs{
