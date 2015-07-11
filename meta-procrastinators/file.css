@@ -1,7 +1,5 @@
 #titles{
     background:#99E699;
-    color: MidnightBlue;
-    padding:0px;
 }
 
 #bodyid{
@@ -39,7 +37,9 @@
     font-size: 15px;
     color: white;
 }
-
+h2{
+    color: MidnightBlue;
+}
 h1, h2{
     text-align: center;
 }
