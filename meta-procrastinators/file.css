@@ -1,11 +1,8 @@
 #titles{
     background:#99E699;
+    color: white;
 }
 
-h1,h2{
-    color: white;
-    text-align: center;
-}
 
 body {
     background:#99E699;
@@ -40,6 +37,10 @@ body {
 #whitevalues{
     font-size: 15px;
     color: white;
+}
+
+h1, h2{
+    text-align: center;
 }
 
 #tasks{
