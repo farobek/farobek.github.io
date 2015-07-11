@@ -2,8 +2,14 @@
     background:#99E699;
 }
 
-a:hover{
+a{
   text-decoration:none;
+}
+
+a:hover{
+ color: black;
+}
+	
 }
 
 #bodyid{
