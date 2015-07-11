@@ -1,12 +1,9 @@
 #titles, head{
     background:#99E699;
     color: SteelBlue;
+    padding:0px;
 }
 
-
-head,body {
-    background:#99E699;
-}
 
 #show{
     background: #5CD65C;
