@@ -1,7 +1,11 @@
-#titles, body{
+#titles{
     background:#99E699;
     color: SteelBlue;
     padding:0px;
+}
+
+#bodyid{
+    background:#99E699;
 }
 
 
