@@ -33,6 +33,28 @@
     border-radius: 5px;
   }
   
+   #description4{
+    display: none;
+    font-family: 'Roboto';
+    padding: 10px;
+    color: white;
+    background: blue;
+    border: 5px;
+    border-radius: 5px;
+  }
+  
+   #description5{
+    display: none;
+    font-family: 'Roboto';
+    padding: 10px;
+    color: white;
+    background: blue;
+    border: 5px;
+    border-radius: 5px;
+  }
+  
+  
+  
   a{
     text-decoration: none;
   }
@@ -53,6 +75,15 @@
 #project3:hover #description3{
     display: inline;
 }
+
+#project4:hover #description4{
+    display: inline;
+}
+
+#project5:hover #description5{
+    display: inline;
+}
+
 
 .home_anchor {
   font-family: 'Roboto';
