@@ -44,7 +44,7 @@ hr{
 .credit{
     text-align: right;
 }
- a{
+ #anchor{
     text-decoration: none;
     color: yellow;
   }
