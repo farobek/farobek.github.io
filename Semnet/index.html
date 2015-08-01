@@ -11,9 +11,9 @@
 
 <body id="bodyid">
     <span><p class="credit">Made by <a href="http://farobek.github.io/">me</a>.</p><span>
-    <h1>Semnet</h1>
+    <h1 id="maintitle">Semnet</h1>
     <div class="convo" ng-controller="Conversation">
-        <h2>Conversation</h2>
+        <h2 id="title">Conversation</h2>
         <div>
             <input type="text" placeholder="Query/Statement goes here" ng-model="userinput"></input>
             <button class="btn btn-primary" ng-click="chooseParser(choice, userinput)">Submit</button>
@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="dbops" ng-controller="DBOps">
-        <h2>Database Operations</h2>
+        <h2 id="title">Database Operations</h2>
         <div>
             <input type="text" ng-model="userinput" placeholder="Token goes here"></input>
             <button class="btn btn-primary" ng-click="dbOpsParser(typeitem,typeop, userinput)">Submit</button>
