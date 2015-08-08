@@ -66,9 +66,7 @@
   #descriptionmotion{
     display: none;
     font-family: 'Roboto';
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 40px;
+    padding: 10px;
     color: white;
     background: blue;
     border: 5px;
@@ -109,6 +107,9 @@
     display: inline;
 }
 
+#motionproject{
+  padding-right: 10px;
+}
 
 #motionproject:hover #descriptionmotion{
     display: inline;
