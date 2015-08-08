@@ -63,6 +63,16 @@
     border-radius: 5px;
   }
   
+  #descriptionmotion{
+    display: none;
+    font-family: 'Roboto';
+    padding: 10px;
+    color: white;
+    background: blue;
+    border: 5px;
+    border-radius: 5px;
+  }
+  
   
   a{
     text-decoration: none;
@@ -94,6 +104,10 @@
 }
 
 #project6:hover #description6{
+    display: inline;
+}
+
+#motionproject:hover #descriptionmotion{
     display: inline;
 }
 
