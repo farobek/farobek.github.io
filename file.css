@@ -107,9 +107,7 @@
     display: inline;
 }
 
-#motionproject{
-  margin-right: 10px;
-}
+
 #motionproject:hover #descriptionmotion{
     display: inline;
 }
