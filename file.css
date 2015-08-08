@@ -107,9 +107,6 @@
     display: inline;
 }
 
-#motionproject{
-  padding-right: 10px;
-}
 
 #motionproject:hover #descriptionmotion{
     display: inline;
