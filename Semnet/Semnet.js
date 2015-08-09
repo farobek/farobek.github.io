@@ -121,6 +121,9 @@ app.service("database", function(){
         getAllLink: function(){
             return linklist;
         },
+        resetYList: function(){
+            ylist = [];
+        },
         getYList: function(){ //gets the list of ynouns
             return ylist;
         },
@@ -409,6 +412,7 @@ function lParser(userinput){
     
 //Query parser
     function qParser(userinput){
+        database.resetYList();
         var bswitch = false;
         var xnoun = "";
         //parsing input
@@ -424,22 +428,43 @@ function lParser(userinput){
         
         var ylist = []; //will contain all the ynouns
         var linklist = database.getAllLink();
-        var fxnoun = xnoun; //to be able to access the queried term;
+        var fxnounq = xnoun; //to be able to access the queried term;
         
         //checks if xnoun has been heard and then if it is known
-        if(database.getNoun(xnoun) == null){ //if it is not in nounlist
+        if(database.getNoun(xnoun)[1] == null){ //if it is not in nounlist
             return "I have not heard of that term.";
         }
         
         
-        else if(database.getNoun(xnoun) != null){ //if it is in nounlist
+        else if(database.getNoun(xnoun)[1] != null){ //if it is in nounlist
             //we check in linklist
             for(var i = 0; i < linklist.length; ++i){
                 if(linklist[i][0] == xnoun){ //if it is in linklist
-                    ylist = database.getLink(i); //we get the ynouns
-                    var fxnoun = ylist[0]; //first sxnoun
-                    var fxnounpos = database.indexGet(1, fxnoun);
-                    inference(fxnounpos, fxnoun); //follows through the links
+                    var xnounpos = database.indexGet(1,xnoun);
+                    ylist = database.getLink(xnounpos); //we get the ynouns - for Soc it is ["human"] and for animal it is [mortal, physical]
+                    
+                    //iteration starts here - every item in ylist is recursively explored
+                    var fxnoun;
+                    var fxnounpos;
+                    var inferencing;                    
+                    
+                    if(ylist.length == 0){ 
+                        return "Isolated item. No related words found.";
+                    }                    
+                    else if(ylist.length > 0){ //we only iterate if there are items
+                        for(var i = 0; i< ylist.length;i++){
+                            fxnoun = ylist[i]; //first sub-xnoun - human is the sub-xnoun of Soc
+                            fxnounpos = database.indexGet(1, fxnoun); //sub-xnoun's position in nounlist
+                            inferencing = inference(fxnounpos, fxnoun); //follows through the links
+                        }
+                    }
+   
+                    //iteration finishes here
+                    
+                    
+                    
+                
+                    //formats the data to be displayed to the user
                     var ylista = database.getYList();
                     newResponse(ylista); 
                     var response = xnoun + " is ";
@@ -475,9 +500,10 @@ function lParser(userinput){
     //inference algorithm
     //given an xnoun, it collects the nouns referenced in their linklists
     function inference(xnounpos, xnoun){
-                
+        
         var isThere = false;
         var ylist = database.getYList();
+
         //Step 1 - stores the ynoun
         for(var i = 0; i< ylist.length; ++i){
             if(xnoun == ylist[i]){
@@ -489,10 +515,10 @@ function lParser(userinput){
         }
         isThere = false;
                 
-        //step 2 - gets the position of the noun
+        //step 2 - gets the position and linklist of the noun so for mortal is 7 and empty and for human is 2 and [animal, mammal]
         var xnounpos = database.indexGet(1,xnoun);
         var xnounlinklist = database.getLink(xnounpos);
-
+        
         //step 3 - calls inference() on each the nouns and their positions
         if(xnounlinklist.length > 0){
             for(var i = 0; i< xnounlinklist.length; ++i){
