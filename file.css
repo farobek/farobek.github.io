@@ -63,6 +63,16 @@
     border-radius: 5px;
   }
   
+  #description7{
+    display: none;
+    font-family: 'Roboto';
+    padding: 10px;
+    color: white;
+    background: blue;
+    border: 5px;
+    border-radius: 5px;
+  }
+  
   #descriptionmotion{
     display: none;
     font-family: 'Roboto';
@@ -104,6 +114,10 @@
 }
 
 #project6:hover #description6{
+    display: inline;
+}
+
+#project7:hover #description7{
     display: inline;
 }
 
