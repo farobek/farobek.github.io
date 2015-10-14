@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    </head>
+
+	<body>
+		
+		<div id="response"> </div>
+		<textarea id="mainTextArea" ng-model="textContent" placeholder="Compose your idea here. When you finish, type your email in the small textbox and press the button."> {{textContent}} 
+		</textarea>
+		<div>
+			<span style=""> {{statusTag}} {{dee}}</span>
+				<textarea ng-model="email" id="emailInput" placeholder="Insert your email"></textarea>
+				<button ng-click="emailContent(email, textContent)">Email your writing</button>
+			
+		</div>
+		
+	</body>
+</html>
