@@ -50,13 +50,14 @@ span{
 }
 
 #mainTextArea{
-	height:500px;
+	height: 90%;
 	width:90%;
 	border:none;
 	font-family:Palatino Linotype;
 	color: #5F9EA0;
 	font-size: 40px;
 	margin-left: 50px;
+	margin-left: 20px;
 	background: white;
 	resize: none
 
