@@ -13,11 +13,13 @@ button{
 	border-radius: 10px;
 	color: grey;
 	font: 14px Palatino Linotype;
+	margin-bottom: 20px;
 }
 
 button:hover{
 	background: grey;
 	color: white;
+	margin-bottom: 20px;
 }
 
 p{
@@ -40,13 +42,15 @@ span{
 	border: 2px solid grey;
 	border-radius: 20px;
 	margin-left: 20%;
+	margin-bottom: 20px;
 	resize: none;
 	color: grey;
 }
 
 #emailInput:focus{
-	border: 2px solid #9ecaed;;
+	border: 2px solid #9ecaed;
 	box-shadow: 0 0 5px #9ecaed;
+	margin-bottom: 20px;
 }
 
 #mainTextArea{
