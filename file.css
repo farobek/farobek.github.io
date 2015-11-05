@@ -94,13 +94,17 @@
   }
   
   
-  a{
+  a, a:visited{
     text-decoration: none;
   }
   
-  a:hover{
+  a:hover, #email:hover{
     color: #DC143C;
   }
+
+	li{
+		font-size: 18px;
+}
 
 p{
     font-size: 20px;
@@ -108,8 +112,20 @@ p{
     color: #333333;
 }
   
+
+.section, #email{
+	color: blue;
+}
+
+.button_link{
+	color: white;
+}
+
+.ordinary_links{
+	color: purple;
+}
   
-  #project1:hover #description1{
+#project1:hover #description1{
     display: inline;
 }
 
@@ -174,5 +190,4 @@ span{
   border-radius: 25px; 
   
 }
-
 
