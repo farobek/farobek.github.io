@@ -5,7 +5,7 @@
   }
   #description1{
     display: none;
-    font-family: 'Roboto';
+    font-family: 'Lato';
     padding: 10px;
     color: white;
     background: blue;
@@ -15,7 +15,7 @@
   
   #description2{
     display: none;
-    font-family: 'Roboto';
+    font-family: 'Lato';
     padding: 10px;
     color: white;
     background: blue;
@@ -25,7 +25,7 @@
   
   #description3{
     display: none;
-    font-family: 'Roboto';
+    font-family: 'Lato';
     padding: 10px;
     color: white;
     background: blue;
@@ -35,7 +35,7 @@
   
    #description4{
     display: none;
-    font-family: 'Roboto';
+    font-family: 'Lato';
     padding: 10px;
     color: white;
     background: blue;
@@ -45,7 +45,7 @@
   
    #description5{
     display: none;
-    font-family: 'Roboto';
+    font-family: 'Lato';
     padding: 10px;
     color: white;
     background: blue;
@@ -55,7 +55,7 @@
   
     #description6{
     display: none;
-    font-family: 'Roboto';
+    font-family: 'Lato';
     padding: 10px;
     color: white;
     background: blue;
@@ -65,7 +65,7 @@
   
   #description7{
     display: none;
-    font-family: 'Roboto';
+    font-family: 'Lato';
     padding: 10px;
     color: white;
     background: blue;
@@ -75,7 +75,7 @@
 
 #description8{
     display: none;
-    font-family: 'Roboto';
+    font-family: 'Lato';
     padding: 10px;
     color: white;
     background: blue;
@@ -85,7 +85,7 @@
   
   #descriptionmotion{
     display: none;
-    font-family: 'Roboto';
+    font-family: 'Lato';
     padding: 10px;
     color: white;
     background: blue;
@@ -104,8 +104,8 @@
 
 	p{
 	font-size: 20px;
-	font-family: 'Roboto';
-    color: grey;
+	font-family: 'Lato';
+    color: #333333;
 }
   
   
@@ -155,15 +155,15 @@ span{
 	width: 25%;
 	margin-left: 5vw;
 	margin-right: 30px;
-	font-family: 'Roboto';
-    color: grey;
+	font-family: 'Lato';
+    color: #333333;
 	
 
 }
 
 
 .home_anchor {
-  font-family: 'Roboto';
+  font-family: 'Lato';
   font-size: 30px;
   text-align: left;
   background: green;
