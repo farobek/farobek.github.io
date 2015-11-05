@@ -1,4 +1,4 @@
-  h6,h4,h2,h1,p, title{
+  h6,h4,h2,h1, title{
     font-family: 'Roboto';
     color: grey;
     text-align: center;
@@ -72,6 +72,16 @@
     border: 5px;
     border-radius: 5px;
   }
+
+#description8{
+    display: none;
+    font-family: 'Roboto';
+    padding: 10px;
+    color: white;
+    background: blue;
+    border: 5px;
+    border-radius: 5px;
+  }
   
   #descriptionmotion{
     display: none;
@@ -91,6 +101,12 @@
   a:hover{
     color: #DC143C;
   }
+
+	p{
+	font-size: 20px;
+	font-family: 'Roboto';
+    color: grey;
+}
   
   
   #project1:hover #description1{
@@ -121,12 +137,28 @@
     display: inline;
 }
 
+#project8:hover #description8{
+    display: inline;
+}
+
 #motionproject{
   text-align: right;
 }
 
 #motionproject:hover #descriptionmotion{
     display: inline;
+}
+
+span{
+
+	display:inline-block;	
+	width: 25%;
+	margin-left: 5vw;
+	margin-right: 30px;
+	font-family: 'Roboto';
+    color: grey;
+	
+
 }
 
 
@@ -141,6 +173,5 @@
   border-radius: 25px; 
   
 }
-
 
 
