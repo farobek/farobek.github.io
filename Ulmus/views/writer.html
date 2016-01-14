@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title></title>
+	<script src="scripts/jQueryCode.js"></script>
+</head>
+<body>
+	<a class="mainAnchor" href="#/">Homepage</a> <a class="mainAnchor" href="#/reader">Reader view</a>
+	<br />
+	<br />
+	<br />
+	<br />
+
+	<div id="accordion">
+
+		<h3>Create</h3>
+		<div>
+			Node title: <input ng-model="nodeTitle"></input>
+			<br></br>
+			Node text: <input ng-model="nodeText"></input>
+			<br></br>
+			<button ng-click="save(nodeTitle, nodeText)">Insert node</button>{{nodeInsertionOutcome.text}}
+			<br></br>
+			Node link: <input ng-model="nodeLink"></input><button ng-click="insertNodeLink(nodeLink)">Insert node link</button>  {{nodeLinkInsertionOutcome}}
+			<br></br>
+			<button ng-click="submitNode()">Submit</button> 
+		</div>
+
+		<h3>Retrieve</h3>
+		<div>
+			Node title: <input ng-model="nodeTitle"></input>
+			<button ng-click="retrieve(nodeTitle)">Retrieve</button><br></br>
+			Node text: <textarea ng-model="nodeText" readonly="true"></textarea>
+		</div>
+
+		<h3>Edit</h3>
+		<div>
+			Node title: <input ng-model="nodeTitle" readonly="false"></input>
+			<button ng-click="edit(nodeTitle, nodeText)">Save</button><br></br>
+			Node text: <textarea ng-model="nodeText"></textarea><br></br>
+			{{editionOutcome.text}}
+		</div>
+
+		<h3> Delete </h3>
+		<div> 
+			Node title: <input ng-model="nodeTitle" readonly="false"></input>
+			<button ng-click="delete(nodeTitle)">Delete</button><br></br>
+			{{deletionOutcome.text}}
+			</div>
+
+	</div>
+
+	
+	
+	
+</body>
+</html>
