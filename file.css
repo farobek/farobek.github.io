@@ -82,46 +82,6 @@ h6,h4,h2,h1, title{
     border-radius: 5px;
   }
   
-   #description5{
-    display: none;
-    font-family: 'Lato';
-    padding: 10px;
-    color: white;
-    background: blue;
-    border: 5px;
-    border-radius: 5px;
-  }
-  
-    #description6{
-    display: none;
-    font-family: 'Lato';
-    padding: 10px;
-    color: white;
-    background: blue;
-    border: 5px;
-    border-radius: 5px;
-  }
-  
-  #description7{
-    display: none;
-    font-family: 'Lato';
-    padding: 10px;
-    color: white;
-    background: blue;
-    border: 5px;
-    border-radius: 5px;
-  }
-
-#description8{
-    display: none;
-    font-family: 'Lato';
-    padding: 10px;
-    color: white;
-    background: blue;
-    border: 5px;
-    border-radius: 5px;
-  }
-  
   #descriptionmotion{
     display: none;
     font-family: 'Lato';
@@ -231,21 +191,6 @@ p{
     display: inline;
 }
 
-#project5:hover #description5{
-    display: inline;
-}
-
-#project6:hover #description6{
-    display: inline;
-}
-
-#project7:hover #description7{
-    display: inline;
-}
-
-#project8:hover #description8{
-    display: inline;
-}
 
 #motionproject{
   text-align: right;
