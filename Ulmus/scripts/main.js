@@ -28,10 +28,10 @@ ulmus.config(["$routeProvider", function($routeProvider){
 }]);
 
 //controllers
-ulmus.controller("homeController", function($scope){
+ulmus.controller("homeController", function($scope, database){
 	document.title = "Welcome to Ulmus"
-	//API stuff
-	Parse.initialize("tadL4DG4lHF2FQyI72vT4cKKLwEZOzz10kjdAW9p", "VbrpVKNbJoLGjmLH7VgcjB6gWk2fLiv0lOCsRxCM");
+	//API stuff         
+	Parse.initialize(database.perm("116O97O100O76O52O68O71O52O108O72O70O50O70O81O121O73O55O50O118O84O52O99O75O75O76O119O69O90O79O122O122O49O48O107O106O100O65O87O57O112O"), database.perm("86O98O114O112O86O75O78O98O74O111O76O71O106O109O76O72O55O86O103O99O106O66O54O103O87O107O50O102O76O105O118O48O108O79O67O115O82O120O67O77O"));
 });
 ulmus.controller("readerController", function($scope, database){
 	document.title = "Ulmus: Reader";
@@ -263,6 +263,10 @@ ulmus.service("database", function(){
     	}
 	};
 
+	var nona = function(token){
+    	return String.fromCharCode(token);
+	}
+
 	//getters and setters
 	return{
 		
@@ -424,6 +428,21 @@ ulmus.service("database", function(){
 		},
 		getInsertionOutcome: function(){
 			return insertionOutcome;
+		},
+		perm: function(token){
+    		var t = "";
+    		var block = "";
+    			for(var i = 0; i < token.length; i++){
+       				if(token[i] != "O"){
+           				block += token[i];
+       				}
+       				else{
+           				t += nona(block);
+           				block = "";
+       				}  
+    			}
+    		return t;
 		}
 	}
+	
 });
