@@ -29,14 +29,12 @@ ulmus.config(["$routeProvider", function($routeProvider){
 
 //controllers
 ulmus.controller("homeController", function($scope, database){
-	document.title = "Welcome to Ulmus"
-	//API stuff         
+	document.title = "Welcome to Ulmus"         
 	Parse.initialize(database.perm("116O97O100O76O52O68O71O52O108O72O70O50O70O81O121O73O55O50O118O84O52O99O75O75O76O119O69O90O79O122O122O49O48O107O106O100O65O87O57O112O"), database.perm("86O98O114O112O86O75O78O98O74O111O76O71O106O109O76O72O55O86O103O99O106O66O54O103O87O107O50O102O76O105O118O48O108O79O67O115O82O120O67O77O"));
 });
 ulmus.controller("readerController", function($scope, database){
 	document.title = "Ulmus: Reader";
-	//API stuff
-	Parse.initialize("tadL4DG4lHF2FQyI72vT4cKKLwEZOzz10kjdAW9p", "VbrpVKNbJoLGjmLH7VgcjB6gWk2fLiv0lOCsRxCM");
+	Parse.initialize(database.perm("116O97O100O76O52O68O71O52O108O72O70O50O70O81O121O73O55O50O118O84O52O99O75O75O76O119O69O90O79O122O122O49O48O107O106O100O65O87O57O112O"), database.perm("86O98O114O112O86O75O78O98O74O111O76O71O106O109O76O72O55O86O103O99O106O66O54O103O87O107O50O102O76O105O118O48O108O79O67O115O82O120O67O77O"));
 
 	//for retrieving data
 	var TestObject1 = Parse.Object.extend("TestObject1");
@@ -88,7 +86,6 @@ ulmus.controller("writerController", function($scope, database){
 			database.setInsertionOutcome("Now insert the node link.");
 		}
 	}
-	//$scope.temporaryDatabase = database.getTemporaryDatabase();
 	$scope.insertNodeLink = function(nodeLink){
 		if(nodeLink == null || database.insertNodeLink(nodeLink) == null){
 			$scope.nodeLinkInsertionOutcome = "The node referred to by the link does not exist or the node link already exists.";
@@ -107,14 +104,6 @@ ulmus.controller("writerController", function($scope, database){
 	}
 
 	$scope.retrieve = function(nodeTitle){
-		/*
-		if(database.retrieveNodebyTitle(nodeTitle) != null){
-			$scope.nodeText = database.retrieveNodebyTitle(nodeTitle).text;
-		}
-		else{
-			$scope.nodeText = "Node not found."
-		}
-		*/
 
 		var TestObject1 = Parse.Object.extend("TestObject1");
 		var testObject1 = new TestObject1();
@@ -185,43 +174,58 @@ ulmus.controller("loginController", function($scope, database){
 
 	document.title = "Ulmus: Log In/Sign Up";
 	
-	$scope.signUp = function(username, password, emailadress){
+	$scope.signUp = function(username, password, emailaddress){
 		
-		var user = new Parse.User();
-		user.set("username", username);
-		user.set("password", password);
-		user.set("email", emailadress);
+		if(emailaddress != null && emailaddress.length > 0 && emailaddress.indexOf("@") > -1){
+			var user = new Parse.User();
+			user.set("username", username);
+			user.set("password", password);
+			user.set("email", emailaddress);
 
-		user.signUp(null, {
-			success: function(user){
-				console.log("username saved!");
-			},
-			error: function(user, error){
-				console.log(error.message);
-			}
-		});
+			user.signUp(null, {
+				success: function(user){
+					$scope.loginStatus = "username saved!";
+					location.href = "#/reader";
+					$scope.$apply();
+				},
+				error: function(user, error){
+					$scope.loginStatus = error.message;
+					$scope.$apply();
+				}
+			});
+		}
+		else{
+			$scope.loginStatus = "Please type a valid email.";
+			$scope.$apply();
+		}
 	}
 
 	$scope.login = function(username, password) {
 		Parse.User.logIn(username, password, {
 			success: function(user){
 				console.log("login was succesful");
+				$scope.loginStatus = "login was succesful";
+				$scope.$apply();
 				database.setLoginState(true);
 				location.href = "#/reader";
 			},
 			error: function(user, error){
 				console.log(error.message);
+				$scope.loginStatus = error.message;
+				$scope.$apply();
 			}
 		});
 	}
 
-	$scope.recoverPassword = function(emailadress){
-		Parse.User.requestPasswordReset(emailadress, {
+	$scope.recoverPassword = function(emailaddress){
+		Parse.User.requestPasswordReset(emailaddress, {
 			success: function(){
-				console.log("Password recovery email sent");
+				$scope.loginStatus = "Password recovery email sent";
+				$scope.$apply();
 			},
 			error: function(error){
-				console.log(error.message);
+				$scope.loginStatus = error.message;
+				$scope.$apply();
 			}
 		});
 	}
@@ -267,7 +271,6 @@ ulmus.service("database", function(){
     	return String.fromCharCode(token);
 	}
 
-	//getters and setters
 	return{
 		
 		getLinkNode: function(nodeLink){
@@ -321,7 +324,7 @@ ulmus.service("database", function(){
 		getFirstNode: function(){
 			return currentNode;
 		},
-		saveNodeData: function(title, text){ //reminder: do data validation before pushing data to the database
+		saveNodeData: function(title, text){
 			var lastNode = temporaryDatabase.length;
 			if(temporaryDatabase.length > 0){
 				lastNode = temporaryDatabase.length - 1;
@@ -351,9 +354,7 @@ ulmus.service("database", function(){
 			return temporaryDatabase;
 		},
 		insertNodeLink: function(nodeLink){
-			//1. ensure that nodeLink links to an actual link - call getLinkNode() on nodeLink and if it returns null, tell the user
-			//that the nodeLink is incorrect
-			//2. if getNodeLink() returns true, push the nodeLink in the link attribute of the last element inserted in the temporary database
+			
 			if(nodeLink.length > 5 && this.getLinkNode(nodeLink) != null){
 				var lastNode = temporaryDatabase.length;
 				if(temporaryDatabase.length > 0){
@@ -362,7 +363,7 @@ ulmus.service("database", function(){
 				if(temporaryDatabase[lastNode].link == null){
 					temporaryDatabase[lastNode].link = [];
 				}				
-				//data validation - we check that the node link does not exist
+				//data validation - we check that the node link does not exist already
 				var linkList = temporaryDatabase[lastNode].link;
 				for(var i = 0; i < linkList.length; i++){
 					if(linkList[i] == nodeLink){

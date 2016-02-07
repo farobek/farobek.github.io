@@ -18,6 +18,8 @@
 				Username: <input ng-model="username" /><br /><br />
 				Password: <input ng-model="password" /><br /><br />
 				<button ng-click="login(username, password)">Submit</button>
+				<br /><br />
+				<b>{{loginStatus}}</b>
 			</div>
 
 			<h3>Sign Up</h3>
@@ -26,12 +28,16 @@
 				Password: <input ng-model="password" /><br /><br />
 				Email: <input ng-model="emailaddress" /> <br /><br />
 				<button ng-click="signUp(username, password, emailaddress)">Submit</button>
+				<br /><br />
+				<b>{{loginStatus}}</b>
 			</div>
 
 			<h3>Forgot your password?</h3>
 			<div>
 				Username: <input ng-model="emailaddress" /><br /><br />
 				<button ng-click="recoverPassword(emailaddress)">Submit</button>
+				<br /><br />
+				<b>{{loginStatus}}</b>
 			</div>
 		</div>
 
