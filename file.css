@@ -81,6 +81,16 @@ h6,h4,h2,h1, title{
     border: 5px;
     border-radius: 5px;
   }
+
+#description5{
+    display: none;
+    font-family: 'Lato';
+    padding: 10px;
+    color: white;
+    background: blue;
+    border: 5px;
+    border-radius: 5px;
+  }
   
   #descriptionmotion{
     display: none;
