@@ -1,0 +1,238 @@
+body{
+	background-color: #04B4AE;
+}
+
+.first_section_color{
+	background-image: linear-gradient(#04B4AE, white);
+	color: white;
+	padding-left: 10px;
+	padding-right: 20px;
+	margin-right: -10px;
+	margin-left: -10px;
+}
+
+.second_section_color{
+	background-color: white;
+	color: white;
+	padding-left: 10px;
+	padding-right: 20px;
+	margin-right: -10px;
+	margin-left: -10px;
+}
+
+.third_section_color{
+	background-color: white;
+	padding-left: 10px;
+	padding-right: 20px;
+	margin-right: -10px;
+	margin-left: -10px;
+	margin-bottom: -10px;
+}
+
+.fourth_section_color{
+	background-image: linear-gradient(white,#04B4AE);
+	padding-left: 10px;
+	padding-right: 20px;
+	margin-right: -10px;
+	margin-left: -10px;
+}
+  
+h6,h4,h2,h1, title{
+    font-family: 'Lato';
+    color: white;
+    text-align: center;
+  }
+  #description1{
+    display: none;
+    font-family: 'Lato';
+    padding: 10px;
+    color: white;
+    background: blue;
+    border: 5px;
+    border-radius: 5px;
+  }
+  
+  #description2{
+    display: none;
+    font-family: 'Lato';
+    padding: 10px;
+    color: white;
+    background: blue;
+    border: 5px;
+    border-radius: 5px;
+  }
+  
+  #description3{
+    display: none;
+    font-family: 'Lato';
+    padding: 10px;
+    color: white;
+    background: blue;
+    border: 5px;
+    border-radius: 5px;
+  }
+  
+   #description4{
+    display: none;
+    font-family: 'Lato';
+    padding: 10px;
+    color: white;
+    background: blue;
+    border: 5px;
+    border-radius: 5px;
+  }
+
+#description5{
+    display: none;
+    font-family: 'Lato';
+    padding: 10px;
+    color: white;
+    background: blue;
+    border: 5px;
+    border-radius: 5px;
+  }
+  
+  #descriptionmotion{
+    display: none;
+    font-family: 'Lato';
+    padding: 10px;
+    color: white;
+    background: blue;
+    border: 5px;
+    border-radius: 5px;
+  }
+  
+  
+  a, a:visited{
+    text-decoration: none;
+  }
+  
+  a:hover, #email:hover{
+    color: #DC143C;
+  }
+
+	li{
+		font-size: 18px;
+}
+
+p{
+    font-size: 20px;
+    font-family: 'Lato';
+    color: #333333;
+}
+
+.link_home {
+	display: inline-block;
+	float: right;
+}
+  
+.button_link{
+	color: white;
+}
+
+
+
+.ordinary_links{
+	color: DarkCyan;
+}
+
+.ordinary_links_home{
+	color: purple;
+
+}
+
+.paragraph_subtitle{
+	font: 25px bold;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+#email{
+	color: DarkSlateBlue;
+}
+
+.section{
+	color: DarkSlateBlue;
+	font-size: 18px;
+}
+
+.section_links{
+	text-align: left;
+}
+
+.barred_section{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.left_section_line{
+	background-color: grey;
+	width: 25%;
+	display: inline-block;
+	height: 10px;
+	color: white;
+	border-radius: 30px;
+	float: left;
+}
+
+.right_section_line{
+	background-color: grey;
+	width: 25%;
+	display: inline-block;
+	height: 10px;
+	color: white;
+	float: right;
+	border-radius: 30px;
+}
+  
+#project1:hover #description1{
+    display: inline;
+}
+
+#project2:hover #description2{
+    display: inline;
+}
+
+#project3:hover #description3{
+    display: inline;
+}
+
+#project4:hover #description4{
+    display: inline;
+}
+
+
+#motionproject{
+  text-align: right;
+}
+
+#motionproject:hover #descriptionmotion{
+    display: inline;
+}
+
+
+.mainParagraphs{
+
+	display:inline-block;	
+	width: 25%;
+	margin-left: 5vw;
+	margin-right: 30px;
+	font-family: 'Lato';
+	font-size: 18px;
+    color: white;
+	
+}
+
+
+.home_anchor {
+  font-family: 'Lato';
+  font-size: 30px;
+  text-align: left;
+  background: green;
+  color: white;
+  padding: 30px;
+  border: 25px;
+  border-radius: 25px; 
+  
+}
+
