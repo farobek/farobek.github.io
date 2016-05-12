@@ -13,7 +13,7 @@ function draw(){
   m.move();
   m.displayit();
 }
-function mouseClicked(){ //used to stop the agent
+function mouseReleased(){ //used to stop the agent
     if(value == 0){
         value = 255
         m.stopAgentMovement();
