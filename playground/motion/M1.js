@@ -1,9 +1,12 @@
 
 var m;
 var value = 255;
-
+var width;
+var height;
 function setup() {
-  var canvas = createCanvas(400, 400);
+  width = 400;
+  height = 400;
+  var canvas = createCanvas(width, height);
   canvas.parent("m1");
   m = new Movent();
   m.stopAgentMovement();
@@ -14,6 +17,7 @@ function draw(){
   m.displayit();
 }
 function mouseReleased(){ //used to stop the agent
+	if((mouseY < 0 || mouseY > height) || (mouseX < 0 || mouseX > width)) return false; //this canvas lies within 0 and 400 in the y axis
     if(value == 0){
         value = 255
         m.stopAgentMovement();
