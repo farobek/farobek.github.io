@@ -9,11 +9,13 @@
 	<body>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.js"></script>
-		
-		<script type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>        
-        
-        <script src="scripts/main.js" type="text/javascript"></script>
-
+		<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+		<script type="text/javascript">
+   			(function(){
+      			emailjs.init("user_0JOAI9s1S5LCC1AVZWDVF");
+   			})();
+		</script>
+		<script src="scripts/main.js" type="text/javascript"></script>
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
 		
 		<div ng-view=""></div>

@@ -4,14 +4,14 @@
     </head>
 
 	<body>
-		
 		<div id="response"> </div>
-		<textarea id="mainTextArea" ng-model="textContent" placeholder="Lexicon is not currently available as the company providing the email service API has terminated the service. Lexicon will be working soon with a new email service API. :)"> {{textContent}} 
+		<textarea id="mainTextArea" ng-model="textContent" placeholder="Compose your idea here. When you finish, type your email in the small textbox and press the button."> {{textContent}} 
 		</textarea>
 		<div>
-			<span style=""> {{statusTag}} {{dee}}</span>
 				<textarea ng-model="email" id="emailInput" placeholder="Insert your email"></textarea>
-				<!-- <button ng-click="emailContent(email, textContent)">Email your writing</button> -->
+				<button ng-click="emailContent(email, textContent)">Email your writing</button>
+				<br></br>
+				<span> {{statusTag}} {{dee}}</span>
 			
 		</div>
 		
