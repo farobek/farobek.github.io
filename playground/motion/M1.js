@@ -6,8 +6,7 @@ var height;
 function setup() {
   width = 400;
   height = 400;
-  var canvas = createCanvas(width, height);
-  canvas.parent("m1");
+  createCanvas(width, height);
   m = new Movent();
   m.stopAgentMovement();
 }
@@ -28,8 +27,6 @@ function mouseReleased(){ //used to stop the agent
     }
     return false;
 }
-
-
 //contains the main objects PVector and Movent
 function PVector(xp, yp){
     this.x = xp; //member variables

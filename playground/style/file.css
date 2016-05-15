@@ -19,16 +19,16 @@ h3, div{
 	margin-left: 250px;
 	margin-right: 250px;
 }
-div#m1 span#mainMesage{
+div#helpMessage span#mainMesage{
 	display: inline;
 }
-div#m1:hover span#mainMessage{
+div#helpMessage:hover span#mainMessage{
 	display: none;
 }
-div#m1 span#hiddenMessage{
+div#helpMessage span#hiddenMessage{
 	display: none;
 }
-div#m1:hover span#hiddenMessage{
+div#helpMessage:hover span#hiddenMessage{
 	display: inline;
 }
 h1{
