@@ -1,0 +1,47 @@
+.growth-target-form{
+    display: none;
+}
+
+rect.bar{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    margin-right: 21px;
+}
+
+.visualisation-display{
+    margin-top: 40px;
+    width: 80%;
+    margin-left: 5px;
+}
+
+.main-content-area, .visualisation-container, .top-area-content{
+    margin-left: 2%;
+}
+
+.text {
+    font-family: Georgia, sans-serif;
+    color: #696969;
+}
+
+label{
+    margin-right: 5px;
+}
+
+input.main-content.text{
+    margin-right: 8px;
+}
+
+.form-output{
+    display: inline-block;
+    margin-top: 10px;
+    width: 12%;
+    margin-bottom: 50px;
+}
+
+.top-area-content.text{
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}

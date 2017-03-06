@@ -1,0 +1,91 @@
+body
+{
+    margin-left: 3%;
+    background-image: url(assets/blurry-background-1.jpg);
+    color: #8DEEEE;            
+    font-family: 'Biryani', sans-serif;
+}
+
+h1 
+{
+    font-size: 150px;
+    margin-bottom: 25px;
+}
+
+h2
+{
+    font-size: 70px;
+    margin-top: 1px;
+}
+
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover, .hoverable:hover
+{
+    color: cyan;
+}
+
+.content-text
+{
+    font-size: 50px;
+}
+
+.tech-icon
+{
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.technologies .icons-container
+{
+    position: absolute;
+    left: 25%;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.aspnet-logo
+{
+    background-image: url(assets/asplogo-square.png);
+}
+
+.csharp-logo
+{
+    background-image: url(assets/csharp-logo-square.png);
+}
+
+.js-logo
+{
+    background-image: url(assets/js-logo-square.png);
+}
+
+.jquery-logo
+{
+    background-image: url(assets/jquery-logo-square.gif);
+}
+
+.projects
+{
+    margin-top: 1%;
+}
+
+.projects span
+{
+    margin-right: 40px;
+}
+
+.social-media
+{
+    margin-top: 1%;
+}
