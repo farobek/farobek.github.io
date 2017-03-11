@@ -5,6 +5,7 @@ html
     -moz-background-size: inherit;
     -o-background-size: inherit;
     background-size: inherit;
+    min-height: 100%;
 }
 
 body
