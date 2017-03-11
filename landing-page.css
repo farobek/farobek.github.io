@@ -1,9 +1,9 @@
 html
 {
     background-image: url(assets/blurry-background-1.jpg);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    -webkit-background-size: inherit;
+    -moz-background-size: inherit;
+    -o-background-size: inherit;
     background-size: inherit;
 }
 
