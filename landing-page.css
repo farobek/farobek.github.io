@@ -1,6 +1,6 @@
 html
 {
-    background-image: url(assets/blurry-background-1.jpg);
+    background-image: url(assets/blurry-background-1.jpg) fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
