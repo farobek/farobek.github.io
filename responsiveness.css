@@ -18,10 +18,11 @@
     .projects-mobile
     {
         display: block;
+        margin-top: 84px;
     }
     
     .technologies
     {
-        margin-top: 68px;
+        display: none;
     }
 }
