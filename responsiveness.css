@@ -1,0 +1,27 @@
+@media screen and (max-width:1000px)
+{
+    h1
+    {
+        font-size: 50px;
+    }
+    
+    h2
+    {
+        font-size: 35px;
+    }
+    
+    .projects
+    {
+        display: none;
+    }
+    
+    .projects-mobile
+    {
+        display: block;
+    }
+    
+    .technologies
+    {
+        margin-top: 68px;
+    }
+}

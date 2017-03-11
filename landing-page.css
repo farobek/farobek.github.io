@@ -86,6 +86,11 @@ a:hover, .hoverable:hover
     margin-right: 40px;
 }
 
+.projects-mobile
+{
+    display: none;
+}
+
 .social-media
 {
     margin-top: 1%;
