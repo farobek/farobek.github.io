@@ -1,6 +1,7 @@
 html
 {
     background-image: url(assets/blurry-background-1.jpg);
+    background-size: cover;
 }
 
 body
