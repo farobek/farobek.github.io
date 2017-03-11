@@ -1,7 +1,11 @@
+html
+{
+    background-image: url(assets/blurry-background-1.jpg);
+}
+
 body
 {
     margin-left: 3%;
-    background-image: url(assets/blurry-background-1.jpg);
     color: #8DEEEE;            
     font-family: 'Biryani', sans-serif;
 }
